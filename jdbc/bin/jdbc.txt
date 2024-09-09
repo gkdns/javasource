@@ -1,0 +1,15 @@
+JDBC(Java Database Connectivity) : 자바와 데이터베이스의 상호 연동하는 방법
+- Java 애플리케이션 내에서 JDBC를 이용해서 데이터베이스에 접근
+
+- 드라이버 : 데이터베이스에 맞는 드라이버 준비(ojdbc 버전번호.jar)
+- JDBC 프로그래밍 단계
+1) 드라이버 로드 : Class.forname(오라클 드라이버 이름)
+2) 드라이버를 통해 데이터베이스 연결문 작성
+    url, useri , user password
+3) 1,2 번 작업이 성공한다면 데이터베이스 서버와 연동하는 커넥션을 하나 얻게됨
+4)  3) 얻어낸 커넥션을 통해 Data를 가져올 수 있게됨
+5) ResultSet 객체(결과 행들을 담기 위한 객체) 사용
+
+
+-  ~~~DAO(ex- EmpDAO, DeptDAO) 클래스 : DB CRUD 작업과 관련된 메소드 작성
+-  ~~~DTO(ex- EmpDTO, DeptDTO) 클래스 : 클래스들끼리 데이터를 주고받을때 사용하는 클래스
